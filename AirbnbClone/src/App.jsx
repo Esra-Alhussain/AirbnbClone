@@ -1,5 +1,5 @@
 import './App.module.css'
-import Hero from './componants/Navbar/Hero/Hero'
+import Hero from './componants/Hero/Hero'
 import Navbar from './componants/Navbar/Navbar'
 
 function App() {
