@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  margin-left: 77px;
+  margin-right: 77px;
+  padding-top: 96px;
+  padding-bottom: 32px;
+}
+.image {
+  align-self: center;
+  max-width: 1000px; 
+  height: auto;
+  width: 100%;
+  margin-left: auto; /* Distribute remaining space equally on the left */
+  margin-right: auto;
+}
+
+.paragraph {
+  float: left;
+  margin-top: 0;
+}
+.title {
+  margin-bottom: 16px;
+}
