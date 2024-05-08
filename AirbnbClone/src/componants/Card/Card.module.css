@@ -1,7 +1,8 @@
 .cardsContainer{
 display: flex;
 flex-direction: column;
-width: 180px;
+width: 195px;
+align-items: center;
 }
 
 .starIcon{
@@ -29,7 +30,15 @@ height: 100%;
 .bold{
     font-weight: bold;
 }
-.cardTitle{
+.cardText{
     margin-top:0;
     margin-left: 36px;
+}
+
+.rating{
+    margin-right: 5px;
+}
+
+.viewCount{
+    margin-right: 5px;
 }

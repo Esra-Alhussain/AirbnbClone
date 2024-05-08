@@ -1,20 +1,28 @@
 import star from "../../images/star.png";
-import cardImage from "../../images/cardImg.png";
 import styles from "./Card.module.css";
+import cardImage from "../../images/cardImg.png";
 
-const Card = () => {
+const Card = (props) => {
   return (
     <section className={styles.cardsContainer}>
-      <img src={cardImage} alt="card Image" className={styles.cardImage} />
+      {/* <img src={`../../images/${props.image}`} alt="card Image" className={styles.cardImage} /> */}
+      <img
+        src={cardImage}
+        alt="card Image"
+        className={styles.cardImage}
+      />
+
       <div className={styles.cardInfo}>
         <img src={star} alt="star icon" className={styles.starIcon} />
-        <span className={styles.rating}>5.0</span>
-        <span className={styles.reviewCount}>(6)</span>
-        <span className={styles.country}>USA</span>
+        <span className={styles.rating}>{props.rating}</span>
+        <span className={styles.viewCount}>({props.viewCount})</span>
+        <span className={styles.country}>{props.country}</span>
       </div>
-      <div className={styles.cardTitle}>
-        <p className={styles.title}>Life lessons with Katie Zaferes</p>
-        <p><span className={styles.bold}>From $136</span> / person</p>
+      <div className={styles.cardText}>
+        <p className={styles.title}>{props.title}</p>
+        <p>
+          <span className={styles.bold}>{props.price}</span> / person
+        </p>
       </div>
     </section>
   );
