@@ -1,0 +1,35 @@
+.cardsContainer{
+display: flex;
+flex-direction: column;
+width: 180px;
+}
+
+.starIcon{
+width: 14px;
+height: 100%;
+
+}
+.cardInfo{
+    display: flex;
+    flex-direction: row;
+    margin-left: 36px;
+    margin-top: 9px;
+}
+
+.cardImage{
+    width: 176px;
+    height: 235px;
+    margin-left: 37px;
+}
+
+.costInfo {
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+
+.bold{
+    font-weight: bold;
+}
+.cardTitle{
+    margin-top:0;
+    margin-left: 36px;
+}
