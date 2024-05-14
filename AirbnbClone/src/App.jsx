@@ -1,29 +1,28 @@
 import "./App.module.css";
-import Card from "./componants/Card/Card";
-import Hero from "./componants/Hero/Hero";
-import Navbar from "./componants/Navbar/Navbar";
+import Card from "./Components/Card/Card.jsx";
+import Hero from "./Components/Hero/Hero.jsx";
+import Navbar from "./Components/Navbar/Navbar.jsx";
+// import the array of data from data.js
+import datas from "./data.js";
+console.log(datas)
 
 function App() {
+  const cardData = datas.map((data) => (
+    <Card
+      image={data.coverImg}
+      rating={data.stats.rating}
+      reviewCount={data.stats.reviewCount}
+      country={data.location}
+      title={data.title}
+      price={data.price}
+    />
+  ));
+  
   return (
     <>
       <Navbar />
       <Hero />
-      <Card
-        image="cardImg.png"
-        rating="5.2"
-        viewCount={6}
-        country="Canada"
-        title="Life lessons with Katie Zaferes"
-        price={136}
-      />
-        <Card
-        image="hero.png"
-        rating="5.2"
-        viewCount={6}
-        country="Canada"
-        title="Life lessons with Katie Zaferes"
-        price={136}
-      />
+      {cardData}
     </>
   );
 }
